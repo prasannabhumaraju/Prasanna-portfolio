@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Portfolio Dark Theme - Deep Navy with Neon Gradients */
+    --background: 210 50% 10%;
+    --foreground: 210 20% 88%;
+
+    --card: 215 40% 13%;
+    --card-foreground: 210 20% 88%;
+
+    --popover: 215 40% 13%;
+    --popover-foreground: 210 20% 88%;
+
+    --primary: 190 100% 50%;
+    --primary-foreground: 210 50% 10%;
+
+    --secondary: 270 70% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 215 30% 20%;
+    --muted-foreground: 210 15% 65%;
+
+    --accent: 190 100% 50%;
+    --accent-foreground: 210 50% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 30% 18%;
+    --input: 215 30% 18%;
+    --ring: 190 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Gradient stops for neon accent */
+    --gradient-start: 190 100% 50%;
+    --gradient-end: 270 70% 55%;
+
+    /* Glow effect */
+    --glow: 270 70% 55%;
+  }
+}
+
+/* Gradient utilities */
+.gradient-text {
+  background: linear-gradient(90deg, hsl(var(--gradient-start)), hsl(var(--gradient-end)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-border {
+  position: relative;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(90deg, hsl(var(--gradient-start)), hsl(var(--gradient-end)));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
