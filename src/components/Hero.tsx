@@ -6,6 +6,8 @@ const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
   const roles = ["Python Developer", "Database Developer", "AI Enthusiast","MYSQL Developer","Backend Developer","Full-Stack Developer"];
 
+
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentRole((prev) => (prev + 1) % roles.length);
