@@ -28,7 +28,7 @@ const About = () => {
         
         <div className="max-w-3xl mx-auto mb-16">
           <p className="text-lg text-center text-muted-foreground leading-relaxed">
-           I’m a Python Developer passionate about writing clean, scalable, and efficient code. 
+           I’m a  Developer passionate about writing clean, scalable, and efficient code. 
            I enjoy building backend systems, APIs, and automation tools that make complex tasks simple and effective. 
            Currently, I’m exploring the world of Artificial Intelligence and Machine Learning, 
            learning how intelligent systems can enhance real-world applications. My journey in tech is driven by curiosity, 
